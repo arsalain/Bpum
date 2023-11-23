@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import 'aos/dist/aos.css';
+
+.torn-paper::before,
+.torn-paper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-image: url("/Users/apple/backpackers-united/public/paper-torn.png");  /* Replace with your actual torn edge image */
+  background-repeat: repeat-x;
+}
+
+
+
+.torn-paper::before {
+  top: 0;
+}
+
+.torn-paper::after {
+  bottom: 0;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.react-datepicker__day--highlight {
+  background-color: yellow !important;
+  color: black !important;
+}
+.swiper-button-prev, .swiper-button-next {
+  height: 30px !important;
+  margin-top: 40px !important;
+  background-color: white !important;
+  color: black !important;
+  /* color: white !important;  */
+
+}
+.swiper-but-prev, .swiper-but-next {
+  color: white !important;
+}
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+}
+.swiper-pagination {
+  position: relative !important;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0px !important;
+  width: auto !important;
+}
+@media screen and (max-width: 768px) {
+  .swiper-button-prev, .swiper-button-next {
+    margin-top: 0 !important;
+  }
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 12px !important; /* Adjust this size as per your requirements */
+}
+.hover-effect > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: yellow;
+  transition: width .3s;
+}
+
+.hover-effect:hover > a::after {
+  width: 100%;
+}
+
+.hover-effect > a {
+  transition: font-size .3s;
+}
+
+.hover-effect:hover > a {
+  font-size: 1.05em;
+}
+
+.hover-effect a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hover-effect a span {
+  transition: font-size 0.3s ease;
+}
+
+.hover-effect a:hover span {
+  font-size: 110%;
+}
+
+.hover-effect a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #FFD700;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.hover-effect a:hover::after {
+  transform: scaleX(1);
+}
+
+[label^=label-] {
+  @apply absolute left-4 bottom-5 transform transition-transform duration-200 text-gray-500;
+}
+
+/* Specific effect for each input-label pair */
+.input-fullName:not(:placeholder-shown) + .label-fullName,
+.input-phoneno:not(:placeholder-shown) + .label-phoneno,
+.input-email:not(:placeholder-shown) + .label-email,
+.input-password:not(:placeholder-shown) + .label-password {
+  @apply -translate-y-2;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
