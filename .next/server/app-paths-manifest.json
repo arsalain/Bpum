@@ -1,5 +1,8 @@
 {
-  "/treks/page": "app/treks/page.js",
+  "/blogs/[name]/page": "app/blogs/[name]/page.js",
   "/page": "app/page.js",
-  "/trek/[name]/page": "app/trek/[name]/page.js"
+  "/destinations/[name]/page": "app/destinations/[name]/page.js",
+  "/about/page": "app/about/page.js",
+  "/destinations/page": "app/destinations/page.js",
+  "/blogs/page": "app/blogs/page.js"
 }

@@ -126,7 +126,7 @@ const page : FC<PageProps> = ({ params })=> {
   
     useEffect(() => {
       const fetchData = async () => {
-        const response = await fetch(`http://localhost:4000/trek/tour/${name}`);
+        const response = await fetch(`https://launch-api1.vercel.app/trek/tour/${name}`);
         const data = await response.json();
         console.log("ata",data)
         setData(data);

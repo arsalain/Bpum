@@ -36,7 +36,7 @@ const EnquiryForm = ({ onClose }: EnquiryFormProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:4000/enquiry/save', {
+      const response = await fetch('https://launch-api1.vercel.app/enquiry/save', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

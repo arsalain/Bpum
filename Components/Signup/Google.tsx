@@ -31,7 +31,7 @@ const Googlelogin = () => {
         const result = await signInWithPopup(auth, provider);
         const { displayName, email, photoURL } = result.user;
         
-        const res = await axios.post('http://localhost:4000/auth/google', {
+        const res = await axios.post('https://launch-api1.vercel.app/auth/google', {
           name: displayName,
           email: email,
           image: photoURL,

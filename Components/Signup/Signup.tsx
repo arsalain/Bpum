@@ -17,7 +17,7 @@ const SignUpForm = () => {
     try {
 
         const response = await fetch(
-          "http://localhost:4000/auth/signup",
+          "https://launch-api1.vercel.app/auth/signup",
           {
             headers: {
               "Content-Type": "application/json"

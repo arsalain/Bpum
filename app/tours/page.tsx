@@ -15,7 +15,7 @@ const page = () => {
   useEffect(() => {
         const fetchGroupTourTreks = async () => {
           try {
-            const response = await fetch('http://localhost:4000/trek/grouptour');
+            const response = await fetch('https://launch-api1.vercel.app/trek/grouptour');
             const data = await response.json();
             setGroupTourTreks(data);
           } catch (error) {
@@ -30,7 +30,7 @@ const page = () => {
   useEffect(() => {
     const fetchLongTourTreks = async () => {
       try {
-        const response = await fetch('http://localhost:4000/trek/longtour');
+        const response = await fetch('https://launch-api1.vercel.app/trek/longtour');
         const data = await response.json();
         setLongTourTreks(data);
       } catch (error) {
@@ -46,7 +46,7 @@ const page = () => {
   useEffect(() => {
     const fetchInternationalTreks = async () => {
       try {
-        const response = await fetch('http://localhost:4000/trek/international');
+        const response = await fetch('https://launch-api1.vercel.app/trek/international');
         const data = await response.json();
         setInternationalTreks(data);
       } catch (error) {
@@ -62,7 +62,7 @@ const page = () => {
   useEffect(() => {
     const fetchNorthIndiaTourTreks = async () => {
       try {
-        const response = await fetch('http://localhost:4000/trek/northindiatour');
+        const response = await fetch('https://launch-api1.vercel.app/trek/northindiatour');
         const data = await response.json();
         setNorthIndiaTourTreks(data);
       } catch (error) {

@@ -103,7 +103,7 @@ const page : FC <PageProps> = ({ params })=> {
       <div key={blogs._id} className="mb-6 shadow-lg rounded-lg overflow-hidden border border-white">
         <div className="relative h-[200px]">
           <Image
-            src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/${blogs.image}`}
+            src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${blogs.image}`}
             alt={blogs.imagealt}
             layout="fill"
             objectFit="cover"

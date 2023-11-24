@@ -32,7 +32,7 @@ const Hero = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:4000/trek'); // Use the path to your API route
+        const response = await fetch('https://launch-api1.vercel.app/trek'); // Use the path to your API route
         if (response.ok) {
           const data = await response.json();
           // setProducts(data);

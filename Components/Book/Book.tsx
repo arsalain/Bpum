@@ -179,7 +179,7 @@ const Booking = ({ onClose, Batch, reserveamount, foramount, withoutamount ,name
         description: 'Test Transaction',
         order_id: dataInitiate.orderId,
         handler: async (response: RazorpayResponse) =>{
-          const resVerify = await fetch('http://localhost:4000/book/verifyPayment', {
+          const resVerify = await fetch('https://launch-api1.vercel.app/book/verifyPayment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -193,7 +193,7 @@ const Booking = ({ onClose, Batch, reserveamount, foramount, withoutamount ,name
     
           if(dataVerify.verified) {
             // Save to DB
-            const resSave = await fetch('http://localhost:4000/book/savePayment', {
+            const resSave = await fetch('https://launch-api1.vercel.app/book/savePayment', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

@@ -16,7 +16,7 @@ const LoginForm = () => {
     const handleLogin = async (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-          const response = await axios.post("http://localhost:4000/auth/signin", { email: login.email, password: login.password});
+          const response = await axios.post("https://launch-api1.vercel.app/auth/signin", { email: login.email, password: login.password});
           if(response.data.users === false){
             toast.error("Email is not registered !", {
               position: "top-right",

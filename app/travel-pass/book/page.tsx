@@ -98,7 +98,7 @@ console.log("hey charlie")
  
         // Replace with the correct URL and amount calculation logic for membership
         console.log("hey saad")
-        const resInitiate = await fetch('http://localhost:4000/member/initiatePayment', {
+        const resInitiate = await fetch('https://launch-api1.vercel.app/member/initiatePayment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ totalamount: getTotalFirst().toFixed(2) }) 
@@ -120,7 +120,7 @@ console.log("hey charlie")
             }) 
                {
                 // Handle the response after payment
-                const resVerify = await fetch('http://localhost:4000/member/verifyPayment', {
+                const resVerify = await fetch('https://launch-api1.vercel.app/member/verifyPayment', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -134,7 +134,7 @@ console.log("hey charlie")
 
                 if(dataVerify.verified) {
                     // Save membership details to the backend
-                    const resSave = await fetch('http://localhost:4000/member/savePayment', {
+                    const resSave = await fetch('https://launch-api1.vercel.app/member/savePayment', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({

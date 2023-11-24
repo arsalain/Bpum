@@ -17,7 +17,7 @@ const page = () => {
     // Fetch data for South India destinations
     const fetchSouthIndiaDestinations = async () => {
       try {
-        const response = await fetch('http://localhost:4000/dest/southindia');
+        const response = await fetch('https://launch-api1.vercel.app/dest/southindia');
         const data = await response.json();
         setSouthIndiaDestinations(data);
       } catch (error) {
@@ -28,7 +28,7 @@ const page = () => {
     // Fetch data for North India destinations
     const fetchNorthIndiaDestinations = async () => {
       try {
-        const response = await fetch('http://localhost:4000/dest/northindia');
+        const response = await fetch(' https://launch-api1.vercel.app /dest/northindia');
         const data = await response.json();
         setNorthIndiaDestinations(data);
 
@@ -40,7 +40,7 @@ const page = () => {
     // Fetch data for International destinations
     const fetchInternationalDestinations = async () => {
       try {
-        const response = await fetch('http://localhost:4000/dest/international');
+        const response = await fetch(' https://launch-api1.vercel.app/dest/international');
         const data = await response.json();
         setInternationalDestinations(data);
       } catch (error) {

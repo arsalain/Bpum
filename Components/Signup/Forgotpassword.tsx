@@ -37,7 +37,7 @@ const ForgotPasswordModal : React.FC<ForgotPasswordModalProps> = ({ isOpen, onCl
           theme: "dark",
         });
     } else {
-        const res = await fetch("http://localhost:4000/auth/passwordlink", {
+        const res = await fetch("https://launch-api1.vercel.app/auth/passwordlink", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
