@@ -61,7 +61,8 @@ const page : FC <PageProps> = ({ params })=> {
   const name = params.name
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:4000/blog/${name}`);
+      const response = await fetch(`
+      https://launch-api1.vercel.app/blog/${name}`);
       const data = await response.json();
       console.log("ata",data)
       setBlog(data);
@@ -102,7 +103,7 @@ const page : FC <PageProps> = ({ params })=> {
       <div key={blogs._id} className="mb-6 shadow-lg rounded-lg overflow-hidden border border-white">
         <div className="relative h-[200px]">
           <Image
-            src={`http://localhost:4000/uploads/${blogs.image}`}
+            src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/${blogs.image}`}
             alt={blogs.imagealt}
             layout="fill"
             objectFit="cover"

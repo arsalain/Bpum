@@ -67,7 +67,7 @@ const  BlogSlider =({ data }: { data: DataProps }) => {
      <div className="rounded-xl shadow-lg relative flex flex-col items-center justify-between h-full transition duration-300 cursor-pointer hover:shadow-2xl hover:scale-105 transform bg-black text-white p-4">
      <div className="overflow-hidden relative rounded-xl h-60 w-full">
          <Image
-           src={`http://localhost:4000/uploads/${item.testimage}`} 
+           src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${item.testimage}`} 
            alt={item.testimagealt}
            objectFit="cover"
            layout="fill"

@@ -1,7 +1,5 @@
 {
-  "/travel-pass/page": "app/travel-pass/page.js",
-  "/travel-pass/book/page": "app/travel-pass/book/page.js",
+  "/treks/page": "app/treks/page.js",
   "/page": "app/page.js",
-  "/destinations/[name]/page": "app/destinations/[name]/page.js",
-  "/tour/[name]/page": "app/tour/[name]/page.js"
+  "/trek/[name]/page": "app/trek/[name]/page.js"
 }

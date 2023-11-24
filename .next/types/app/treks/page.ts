@@ -1,4 +1,4 @@
-// File: C:\Users\lenovo\Documents\BPUM\dino-main\app\treks\page.tsx
+// File: C:\Users\lenovo\Documents\BPUF\dino-main\app\treks\page.tsx
 import * as entry from '../../../../app/treks/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

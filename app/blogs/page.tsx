@@ -30,7 +30,7 @@ const Page = () => {
   const cardsPerPage = 8;
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:4000/blog');
+      const response = await fetch('https://launch-api1.vercel.app/blog');
       const data = await response.json();
       console.log("ata",data)
       setBlogs(data.data);
@@ -68,7 +68,7 @@ const Page = () => {
               <div key={index} className="bg-gray-800 rounded-lg overflow-hidden h-[300px] shadow-lg">
                     <div>
                 <div className="w-full h-48 relative">
-                  <Image  src={`http://localhost:4000/uploads/${blog.blogs[0].image}`} alt={ blog.blogs[0].imagealt }      layout="fill"
+                  <Image  src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${blog.blogs[0].image}`} alt={ blog.blogs[0].imagealt }      layout="fill"
         objectFit="cover"/>
 </div>
                 <div className="p-4">

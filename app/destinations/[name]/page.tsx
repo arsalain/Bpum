@@ -164,7 +164,7 @@ const page : FC<PageProps> = ({ params })=> {
   <div className="relative w-full h-64">
   {blogs.blogs && blogs.blogs[0] && (
     <Image
-      src={`http://localhost:4000/uploads/${blogs.blogs[0].image}`}
+      src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${blogs.blogs[0].image}`}
       alt={blogs.blogs[0].imagealt}
       layout="fill"
       objectFit="cover"

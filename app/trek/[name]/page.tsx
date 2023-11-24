@@ -183,7 +183,7 @@ const page : FC<PageProps> = ({ params })=> {
     <div className='flex flex-col'>
       
       <div className=" h-screen w-full relative ">
-        <Image src={`http://localhost:4000/uploads/${data.testimage}`}  alt="kudremukha" layout="fill" objectFit="cover" className='absolute' /> 
+        <Image src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${data.testimage}`}  alt="kudremukha" layout="fill" objectFit="cover" className='absolute' /> 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div> 
            <div className='absolute left-0 bottom-0 w-full' >
 
@@ -331,7 +331,7 @@ const page : FC<PageProps> = ({ params })=> {
                                             {days.image &&
                                                   <div className="w-auto h-40 relative rounded-lg mx-4 ">
                                                   <Image
-                                                      src={`http://localhost:4000/uploads/${days.image}`}
+                                                      src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${days.image}`}
                                                       alt={days.imagealt}
                                                     layout='fill'
                                                     objectFit='cover'
@@ -375,7 +375,7 @@ const page : FC<PageProps> = ({ params })=> {
                                     {days.image &&
                                         <div className="w-full md:w-1/3 h-40 relative rounded-lg overflow-hidden">
                                             <Image
-                                                src={`http://localhost:4000/uploads/${days.image}`}
+                                                src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${days.image}`}
                                                 alt={days.imagealt}
                                               layout='fill'
                                               objectFit='cover'
@@ -561,7 +561,7 @@ const page : FC<PageProps> = ({ params })=> {
                  <Link  href={`/trek/${related.urllink}`} >
         <div className="border rounded-lg overflow-hidden ">
           <Image
-            src={`http://localhost:4000/uploads/${related.testimage}`}
+            src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${related.testimage}`}
             alt={related.testimagealt}
             style={{ height: '200px' }}
             width={400} 

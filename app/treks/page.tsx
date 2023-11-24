@@ -18,7 +18,7 @@ const [tnTrekTreks, setTnTrekTreks] = useState([]);
 useEffect(() => {
   const fetchNorthIndiaTrekTreks = async () => {
     try {
-      const response = await fetch('http://localhost:4000/trek/northindiatrek');
+      const response = await fetch('https://launch-api1.vercel.app/trek/northindiatrek');
       const data = await response.json();
       setNorthIndiaTrekTreks(data);
     } catch (error) {
@@ -33,7 +33,7 @@ useEffect(() => {
 useEffect(() => {
   const fetchKarnatakaTrekTreks = async () => {
     try {
-      const response = await fetch('http://localhost:4000/trek/karnatakatrek');
+      const response = await fetch('https://launch-api1.vercel.app/trek/karnatakatrek');
       const data = await response.json();
       setKarnatakaTrekTreks(data);
     } catch (error) {
@@ -48,7 +48,7 @@ useEffect(() => {
 useEffect(() => {
   const fetchKeralaTrekTreks = async () => {
     try {
-      const response = await fetch('http://localhost:4000/trek/keralatrek');
+      const response = await fetch('https://launch-api1.vercel.app/trek/keralatrek');
       const data = await response.json();
       setKeralaTrekTreks(data);
     } catch (error) {
@@ -63,7 +63,7 @@ useEffect(() => {
 useEffect(() => {
   const fetchTnTrekTreks = async () => {
     try {
-      const response = await fetch('http://localhost:4000/trek/tntrek');
+      const response = await fetch('https://launch-api1.vercel.app/trek/tntrek');
       const data = await response.json();
       setTnTrekTreks(data);
     } catch (error) {
