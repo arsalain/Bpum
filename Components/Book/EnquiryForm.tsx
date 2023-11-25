@@ -55,11 +55,12 @@ const EnquiryForm = ({ onClose }: EnquiryFormProps) => {
        // Close the form on successful submission
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert("Error Submiting Form")
     }
   };
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto z-10">
-      <div className="bg-black text-white rounded shadow-lg mt-20 mb-2 p-4">
+      <div className="bg-black text-white rounded shadow-lg  mb-2 p-4">
         <form onSubmit={handleSubmit}>
           <div className='flex justify-between'>
             <h2 className="text-3xl font-bold mb-8 " id="enquiryFormTitle">Enquiry</h2>
@@ -79,7 +80,7 @@ const EnquiryForm = ({ onClose }: EnquiryFormProps) => {
               required
             />
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 mb-6">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             <div>
               <label htmlFor="phoneNumber" className="block text-sm font-medium text-yellow-500">Phone Number</label>
               <input

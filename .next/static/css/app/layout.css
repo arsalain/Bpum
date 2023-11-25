@@ -592,6 +592,9 @@ video {
 .top-\[11px\] {
   top: 11px;
 } 
+.top-full {
+  top: 100%;
+} 
 .z-0 {
   z-index: 0;
 } 
@@ -750,6 +753,9 @@ video {
 .mt-\[6px\] {
   margin-top: 6px;
 } 
+.mt-16 {
+  margin-top: 4rem;
+} 
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -881,6 +887,9 @@ video {
 } 
 .h-screen {
   height: 100vh;
+} 
+.max-h-60 {
+  max-height: 15rem;
 } 
 .min-h-screen {
   min-height: 100vh;
@@ -1155,6 +1164,9 @@ video {
 .self-center {
   align-self: center;
 } 
+.overflow-auto {
+  overflow: auto;
+} 
 .overflow-hidden {
   overflow: hidden;
 } 
@@ -1191,6 +1203,10 @@ video {
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+} 
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 } 
 .border {
   border-width: 1px;

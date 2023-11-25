@@ -6,12 +6,53 @@ import React, { useState,useEffect } from 'react'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 import Trek from '@/Components/Treks/Trek'
 import Image from 'next/image'
+import Link from 'next/link'
+interface Product {
+  id: string;
+  name: string;
+  _id: string;
+  urllink: string;
+  type: 'trek' | 'tour' | 'destinations'; 
+}
+interface BaseProduct {
+  id: string;
+  name: string;
+  _id: string;
+  urllink: string;
+  type: 'trek' | 'tour' | 'destinations'; 
+}
 const page = () => {
-  const [searchInput, setSearchInput] = useState("")
   const [groupTourTreks, setGroupTourTreks] = useState([]);
   const [longTourTreks, setLongTourTreks] = useState([]);
   const [internationalTreks, setInternationalTreks] = useState([]);
   const [northIndiaTourTreks, setNorthIndiaTourTreks] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
+  const [products, setProducts] = useState<Product[]>([]);
+
+  const fetchData = async () => {
+      try {
+          const trekResponse = await fetch('http://localhost:4000/trek/trek');
+          const tourResponse = await fetch('http://localhost:4000/trek/tour');
+          const destinationResponse = await fetch('http://localhost:4000/dest');
+
+          const treks = await trekResponse.json();
+          const tours = await tourResponse.json();
+          const destinations = await destinationResponse.json();
+
+          const destWithType = destinations.data.map((item: BaseProduct) => ({ ...item, type: 'destinations' })) || [];
+          const treksWithType = treks?.map((item: BaseProduct) => ({ ...item, type: 'trek' })) || [];
+          const toursWithType = tours?.map((item: BaseProduct) => ({ ...item, type: 'tour' })) || [];
+         
+    
+          setProducts([...destWithType,...treksWithType, ...toursWithType, ]);
+      } catch (error) {
+          console.error('Error fetching data:', error);
+      }
+  };
+
+  useEffect(() => {
+      fetchData();
+  }, []);
   useEffect(() => {
         const fetchGroupTourTreks = async () => {
           try {
@@ -95,7 +136,8 @@ const page = () => {
       {/* <div className='relative h-[50vh] text-white font-bold text-center flex flex-col justify-center items-center  border-t-2 border-b-2 border-gray-700'> */}
       <div className='relative z-10 w-[80%] flex flex-col justify-center items-center'>
      <div className='text-xl md:text-4xl'>Tours</div> 
-      <div className="flex items-center bg-white  md:w-1/2 rounded-xl p-1 border-2 border-gray-200 mt-4">
+     <div className="flex flex-col  bg-white  md:w-1/2 rounded-xl p-1 border-2 border-gray-200 mt-4">
+        <div className='flex flex-row justify-between'>
                 <input
                     type="text"
                     placeholder="Search for amazing destations"
@@ -103,9 +145,24 @@ const page = () => {
                     onChange={(e) => setSearchInput(e.target.value)}
                     value={searchInput}
                 />
+     
                 <button className="text-black p-2">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="text-xl" />
                 </button>
+            </div>
+            <div className='flex flex-col items-start pl-2'>
+            {Array.isArray(products) && searchInput.length >= 3 && products
+                .filter(item => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+                .slice(0, 5)
+                .map((product, index) => (
+                    <div className="text-black cursor-pointer" key={product.id || index}>
+                        <Link href={`/${product.type}/${product.urllink}`}>
+                            <div className="text-black">{product.name}</div>
+                        </Link>
+                    </div>
+                ))
+            }
+            </div>
             </div>
       </div>
 </div>

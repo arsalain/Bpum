@@ -120,7 +120,7 @@ const page : FC<PageProps> = ({ params })=> {
   <div className="relative flex flex-col  gap-2">
     <div className="relative md:w-[50%] w-[100%] h-[400px]">
       <Image
-        src={`http://localhost:4000/uploads/${products.testimage}`}
+        src={`https://bpu-images-v1.s3.eu-north-1.amazonaws.com/uploads/${products.testimage}`}
         alt="Zostel Shillong"
         layout="fill"
         objectFit="cover"
